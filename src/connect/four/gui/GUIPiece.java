@@ -51,7 +51,7 @@ public class GUIPiece extends JLabel{
 	}
 	
 	ImageIcon getGlow(int index){
-		return glowing[index+5];
+		return glowing[index+5]; //This is where I made the change so the game can be played without errors.
 	}
 
 
