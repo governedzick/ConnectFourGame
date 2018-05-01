@@ -601,8 +601,7 @@ public class GamePanel extends javax.swing.JPanel implements ScoreChart.Listener
 	
 	public void turn(){
 		if(falling == false && isValidMove()){
-			System.out.println(getColumnNum());
-			System.out.println(board.getColumnHeight(getColumnNum()));
+			System.out.println(game.getCurrentPlayer().getName() + " played at: (" + (getColumnNum()+1) + ", " + (board.getColumnHeight(getColumnNum())+1) + ")");
 			dropPiece();
 		}
 	}
