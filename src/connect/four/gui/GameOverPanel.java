@@ -2,10 +2,18 @@
 
 package connect.four.gui;
 
+import javax.swing.JOptionPane;
+import java.util.concurrent.ThreadLocalRandom;
+
 
 public class GameOverPanel extends javax.swing.JPanel {
 
 	GUI gui;
+	String gameTip[] = {"Control the center to give yourself more avenues of attack!",
+			    "Plan multiple move in advance to set yourself up for victory!",
+			    "When possible: Block your opponent from getting a three-disk connection!",
+			    "Don't fill a slot under a game ending move for your opponent!"};
+	int randomNum = ThreadLocalRandom.current().nextInt(0, 4 + 1);
 	
 	public GameOverPanel(GUI gui, String winner) {
 		initComponents();
@@ -14,6 +22,9 @@ public class GameOverPanel extends javax.swing.JPanel {
 		System.out.println("Here!");
 		winnerDisplay.setText(winner);
 		setVisible(true);
+		if (winner == "Computer") {
+			JOptionPane.showMessageDialog(butMainMenu, gameTip[randomNum], "Helpful Tip!", JOptionPane.INFORMATION_MESSAGE);
+		}
 	}
 	
 	
