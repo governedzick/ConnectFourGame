@@ -13,7 +13,7 @@ public class GameOverPanel extends javax.swing.JPanel {
 			    "Plan multiple move in advance to set yourself up for victory!",
 			    "When possible: Block your opponent from getting a three-disk connection!",
 			    "Don't fill a slot under a game ending move for your opponent!"};
-	int randomNum = ThreadLocalRandom.current().nextInt(0, 4 + 1);
+	int randomNum = ThreadLocalRandom.current().nextInt(0, 3 + 1);
 	
 	public GameOverPanel(GUI gui, String winner) {
 		initComponents();
