@@ -22,9 +22,7 @@ public class GameOverPanel extends javax.swing.JPanel {
 		System.out.println("Here!");
 		winnerDisplay.setText(winner);
 		setVisible(true);
-		if (winner == "Computer") {
-			JOptionPane.showMessageDialog(butMainMenu, gameTip[randomNum], "Helpful Tip!", JOptionPane.INFORMATION_MESSAGE);
-		}
+		JOptionPane.showMessageDialog(butMainMenu, gameTip[randomNum], "Helpful Tip!", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	
